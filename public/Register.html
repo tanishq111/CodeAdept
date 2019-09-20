@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CodeAdept</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+    body {
+      background-image: url(/static/images/indexbg.png);
+           background-repeat:no-repeat;
+           background-size:cover;
+           background-attachment: fixed;
+    }
+    </style>
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" href="/static/images/codeadeptprofilelogo.png">
+  </head>
+  <body>
+    <div class="reg-home container pullRight">
+      <a href="index.html">HOME</a>
+    </div>
+
+    <div class="row">
+      <div class="logobox col-xs-6">
+        <img class ="lr" src="/static/images/codeadeptprofilelogo.png" alt="">
+      </div>
+
+      <div class="Reg-Box col-xs-6">
+      <form id="fb" name="RegForm" class="reg-f" action="https://docs.google.com/spreadsheets/d/1hpXbWDIOcUqjS5jK5iVk1enN7ydXHbkQfIVJDhSC_FU/edit?usp=sharing" method="post" onsubmit="validate()">
+      Name :<br>
+      <input class="input" autocomplete="off" type="text" name="name" required placeholder="" style="color:black"><br>
+      Email :- <br>
+      <input class="input"  type="text" autocomplete="off" name="email" required placeholder="" STYLE="color: black"><br>
+      Branch:- <br>
+      <select class="input" name="Branch">
+  <option value="Computer Science">Computer Science</option>
+  <option value="Information Technology">Information Technology</option>
+  <option value="Electronics and Communication">Electronics and Communication </option>
+  <option value="Electrical and Electronics">Electrical and Electronics</option>
+  <option value="Mechnical Engineering">Mechnical Engineering</option>
+  <option value="Automobile Engineering">Automobile Engineering</option>
+  <option value="Petrochemical Engineering">Petrochemical Engineering</option>
+  <option value="Civil Engineering">Civil Engineering</option>
+  <option value="MCA">MCA</option>
+</select><br>
+      Enrollment Number:- <br>
+      <input class="input" type="text" autocomplete="off" name="EN" required placeholder="" STYLE="color:black"><br>
+      Year:-<br>
+      <select class="input" name="year">
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+        <option value="PG">PG</option>
+      </select><br>
+      Mobile number :- <br >
+      <input class="input" type="text" autocomplete="off" name="MN" required placeholder="" STYLE="color: black"><br>
+      <br>
+      <input type="submit" value="Register">
+      </form>
+      </div>
+    </div>
+    <script type="text/javascript">
+    function validate()
+  {
+  var name = document.forms["RegForm"]["Name"];
+  var email = document.forms["RegForm"]["EMail"];
+  var Branch = document.forms["RegForm"]["Branch"];
+  var EN =  document.forms["RegForm"]["EN"];
+  var year = document.forms["RegForm"]["year"];
+  var MN = document.forms["RegForm"]["MN"];
+
+  if (name.value == "")
+  {
+      window.alert("Please enter your name.");
+      name.focus();
+      return false;
+  }
+  if (email.value == "")
+  {
+      window.alert("Please enter a valid e-mail address.");
+      email.focus();
+      return false;
+  }
+
+  if (email.value.indexOf("@", 0) < 0)
+  {
+      window.alert("Please enter a valid e-mail address.");
+      email.focus();
+      return false;
+  }
+
+  if (email.value.indexOf(".", 0) < 0)
+  {
+    window.alert("Please enter a valid e-mail address.");
+    email.focus();
+    return false;
+}
+if (Branch.value == "")
+{
+    window.alert("Please enter your name.");
+    name.focus();
+    return false;
+}
+if (EN.value == "")
+{
+    window.alert("Please enter your enrollment number.");
+    name.focus();
+    return false;
+}
+if (year.value == "")
+{
+    window.alert("Please enter your Year.");
+    name.focus();
+    return false;
+}
+if (MN.value == "")
+{
+    window.alert("Please enter your Mobile number.");
+      phone.focus();
+      return false;
+  }
+
+  return true;
+  }</script>
+  </body>
+</html>

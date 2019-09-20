@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CodeAdept</title>
+    <style type="text/css">
+    body {
+      background-image: url(/static/images/indexbg.png);
+           background-repeat:no-repeat;
+           background-size:cover;
+           background-attachment: fixed;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/images/codeadeptprofilelogo.png">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://kit.fontawesome.com/f6f7704e20.js"></script>
+
+  </head>
+  <body>
+    <div class="container pullRight">
+    <a href="index.html">HOME</a>
+    <a href="Register.html">REGISTER</a>
+    <a href="contactus.html">CONTACT US</a>
+    <a href="adept.html">ADEPT'18</a>
+    <a href="guidelines.html">GUIDELINES</a>
+    <a href="About.html">ABOUT</a>
+  </div>
+  <div class="logo-div">
+    <img src="/static/images/codeadeptprofilelogo.png" alt="">
+  </div>
+  <div id="demo">
+  <span id="days" class="time"></span><span id="hrs" class="time"></span><span id="mins" class="time"></span><span id="secs" class="time"></span>
+  </div>
+  </body>
+  <script type="text/javascript">
+var deadline = new Date("Sept 27, 2019 11:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var t = deadline - now;
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((t % (1000 * 60)) / 1000);
+document.getElementById("days").innerHTML = days + "d ";
+document.getElementById("hrs").innerHTML = hours + "h ";
+document.getElementById("mins").innerHTML = minutes + "m ";
+document.getElementById("secs").innerHTML = seconds + "s ";
+
+  if (t < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "Event is Live";
+  }
+}, 1000);
+</script>
+</html>
